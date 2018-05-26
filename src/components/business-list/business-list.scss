@@ -1,0 +1,35 @@
+business-list {
+    & > div {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        padding: 16px;
+
+        & > div {
+            display: inline-block;
+        }
+
+        & > .title {
+            text-transform: uppercase;
+        }
+
+        & > .badge {
+            display: flex;
+            background: color($colors, secondary);
+            color: color($colors, light);
+            padding: 8px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: $h4-font-size;
+            flex-direction: column;
+
+            & > span {
+                display: inline;
+            }
+        }
+
+        border-bottom: 1px solid color($colors, dark);
+    }
+}

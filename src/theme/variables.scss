@@ -55,7 +55,6 @@ $colors: (
 
 
 
-
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
@@ -83,6 +82,4 @@ $colors: (
 
 // Fonts
 // --------------------------------------------------
-
-@import "roboto";
-@import "noto-sans";
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300,500,700');

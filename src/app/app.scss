@@ -14,3 +14,113 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// Font
+
+
+* {
+    font-family: 'Sunflower';
+}
+
+$letter-spaced: 1px;
+
+
+.full-height {
+    height: 100vh;
+
+    & > ion-row {
+        height: 100%;
+
+        ion-col {
+            min-height: 471px;
+        }
+
+    }
+
+}
+
+
+input {
+    border: 1px solid color($colors, dark);
+    border-radius: $button-round-border-radius;
+    padding: 1em;
+    font-size: 110%;
+    width: 100%;
+    letter-spacing: $letter-spaced;
+}
+
+[class^="header"]::after {
+    display: none;
+}
+
+ion-header {
+    [class^="toolbar-background"] {
+        background: none;
+        border-bottom: 1px solid color($colors, dark);
+    }
+
+    [class^="toolbar-content"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > * {
+            display: inline-block;
+        }
+    }
+
+    .menu-btn {
+        background: none;
+        
+        ion-icon {
+            font-size: 35px;
+        }
+    }
+}
+
+.menu-wrapper {
+    .profile-display {
+        height: 200px;
+        border-bottom: 1px solid color($colors, dark)
+    }
+
+    .menu-items {
+        padding: 0;
+
+        ion-list {
+            ion-item {
+
+                &:last-child {
+                    border-bottom: none !important;
+                }
+
+                padding: 0;
+
+                &:active {
+                    background: color($colors, light);
+                }
+
+                [class^="item-inner"] {
+                    padding: 0;
+                }
+
+                .menu-btn {
+                    width: 100%;
+                    padding: 16px;
+                    font-size: $h4-font-size;
+                    background: none;
+                    text-transform: uppercase;
+                    letter-spacing: $letter-spaced;
+                    text-align: left;
+
+                    ion-icon {
+                        vertical-align: middle;
+                    }
+                }
+
+                border-bottom: 1px solid color($colors, dark);
+
+            }
+        }
+    }
+}
